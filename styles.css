@@ -15,6 +15,27 @@ ul {
 
 li {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+img {
+  height: 20px;
+  width: 20px;
+}
+
+.title > img {
+  height: 40px;
+  width: 40px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(29deg) brightness(107%) contrast(102%);
+  margin-right: 8px;
+}
+
+li > img {
+  height: 20px;
+  width: 20px;
+  color: white;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(29deg) brightness(107%) contrast(102%);
 }
 
 .container {
@@ -42,10 +63,7 @@ li {
   display: grid;
   align-content: start;
   gap: 40px;
-  padding-left: 10%;
-}
-
-.sidebar > * {
+  padding-left: 5%;
 }
 
 .title {
@@ -53,6 +71,9 @@ li {
   color: white;
   font-weight: 900;
   font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
 }
 
 .list-one > ul,
@@ -63,6 +84,7 @@ li {
   gap: 16px;
   color: white;
   font-weight: 900;
+  padding-left: 4.2%;
 }
 
 .content {
@@ -125,13 +147,18 @@ li {
 }
 
 .card-text-body {
-  font-size: .9rem;
+  font-size: .7rem;
+  color: grey;
+  padding-right: 10px;
 }
 
 .card-buttons {
   justify-self: end;
   padding-bottom: 5px;
   padding-right: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .cont-right {
@@ -163,18 +190,27 @@ li {
 
 .section-one, .section-two {
   border-bottom: solid rgba(200,200,200, 0.4) 2px;
-  margin-bottom: 10%;
+  margin-bottom: 1.8%;
 }
 
 .sec-header {
   font-weight: bold;
-  font-size: .6rem;
+  font-size: .7rem;
+  margin-bottom: 2px;
+}
+
+.profile-img > img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
 .profile {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 5fr;
+  padding-bottom: 1px;
 }
 
 .profile-img {
@@ -182,6 +218,7 @@ li {
 }
 
 .handle {
+  font-size: .8rem;
   grid-row-start: 1;
 }
 
@@ -191,7 +228,7 @@ li {
 
 .header {
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1.5fr 3fr;
   grid-template-columns: 5fr 3fr;
 }
 
@@ -212,7 +249,11 @@ li {
   background: #ddd;
   border: none;
   border-radius: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+.search > img {
+  justify-self: end;
 }
 
 .notifications {
@@ -220,22 +261,56 @@ li {
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
-  justify-content: center;
+  padding-top: 5px;
+}
+
+.notifications > * {
+  align-self: end;
+  justify-self: end;
 }
 
 .notifications > .bell {
   align-self: end;
   justify-self: end;
-}
-
-.notifications > .profile-pic {
-  align-self: end;
-  justify-self: center;
+  padding-bottom: 5px
 }
 
 .notifications > .name {
-  align-self: end;
   justify-self: start;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.notifications > .profile-pic {
+  justify-self: center;
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.head-profile > img {
+  justify-self: center;
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  grid-row: span 2;
+  align-self: center;
+  justify-self: end;
+  margin-right: 15px;
+  margin-top: 16px;
+}
+
+.profile > .handle {
+  align-self: end;
+}
+
+.profile > .description {
+  font-size: .7rem;
+  color: grey;
+}
+
+.profile > .profile-img {
+  align-self: center;
 }
 
 .head-profile {
@@ -256,6 +331,16 @@ li {
   align-self: end;
 }
 
+.hi-there {
+  font-weight: bold;
+  font-size: .7rem;
+}
+
+.head-profile > .name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .head-buttons {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
@@ -263,7 +348,7 @@ li {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2%;
-  margin-right: 4%;
+  margin-right: 10%;
 }
 
 .head-buttons > * {
@@ -277,4 +362,9 @@ li {
 }
 
 .share {
+}
+
+.sec-body {
+  font-size: .6rem;
+  color: grey;
 }
